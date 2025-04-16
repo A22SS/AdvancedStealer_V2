@@ -1,11 +1,14 @@
-# main.py (version corrigée)
-import sys  # Import manquant ajouté ici
+#!/usr/bin/env python3
+# main.py - Point d'entrée principal
+
+import sys
 import os
 import logging
+
 from PyQt5.QtWidgets import QApplication
 from gui.ui.main_window import AdvancedStealerGUI
 
-# Configuration du logging
+# Configure le logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -16,18 +19,17 @@ logging.basicConfig(
 )
 
 def main():
-    app = QApplication(sys.argv)
-    
-    # Résolution des chemins pour les imports
+    # Ajoute le dossier racine au PYTHONPATH pour que les imports fonctionnent partout
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     
+    app = QApplication(sys.argv)
     try:
         window = AdvancedStealerGUI()
         window.show()
-        sys.exit(app.exec_())
+        return app.exec_()
     except Exception as e:
-        logging.critical(f"ERREUR : {str(e)}", exc_info=True)
-        sys.exit(1)
+        logging.critical(f"Erreur lors du lancement : {str(e)}", exc_info=True)
+        return 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

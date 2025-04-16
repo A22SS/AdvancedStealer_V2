@@ -1,16 +1,12 @@
 
 from core.payloads import PayloadFactory  
-from controllers.module_controller import ModuleController
-from gui.ui.main_window import AdvancedStealerGUI
+from gui.controllers.module_controller import ModuleController
 
 import sys
 import os
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QTabWidget, QVBoxLayout, 
-                             QHBoxLayout, QWidget, QPushButton, QTreeView, 
-                             QSplitter, QTextEdit, QLabel, QStatusBar, QToolBar, 
-                             QAction, QFileDialog, QMessageBox)
-from PyQt5.QtGui import QIcon, QColor
-from PyQt5.QtCore import Qt, QDir
+from PyQt5.QtWidgets import QMainWindow, QWidget, QTabWidget, QVBoxLayout, QHBoxLayout, QPushButton, QTreeView, QSplitter, QTextEdit, QLabel, QStatusBar, QToolBar, QAction
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import Qt
 import qdarkstyle
 
 class AdvancedStealerGUI(QMainWindow):
