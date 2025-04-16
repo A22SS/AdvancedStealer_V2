@@ -1,0 +1,11 @@
+cryptography
+psutil
+requests
+pdfkit 
+pycryptodome
+binaryornot
+dnspython
+pyqt5
+qdarkstyle
+pyqt5-tools
+pyqtwebengine

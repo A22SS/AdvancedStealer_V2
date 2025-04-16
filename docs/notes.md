@@ -1,0 +1,1 @@
+Résumé technique du projet, organisation des modules, fonctionnement général, précautions d’utilisation, justification des techniques (mutation, exécution furtive, exfiltration, persistance, évasion, collecte crypto).
