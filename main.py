@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # main.py - Point d'entrée principal (version corrigée)
-
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sys
 import os
 import logging

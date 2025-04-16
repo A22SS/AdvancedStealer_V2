@@ -1,3 +1,4 @@
+
 from core.payloads import PayloadFactory  
 from controllers.module_controller import ModuleController
 from gui.ui.main_window import AdvancedStealerGUI
