@@ -1,5 +1,5 @@
-from ..core.payloads import PayloadFactory  # Import relatif
-from .controllers.module_controller import ModuleController
+from core.payloads import PayloadFactory  
+from controllers.module_controller import ModuleController
 from gui.ui.main_window import AdvancedStealerGUI
 
 import sys
@@ -65,27 +65,37 @@ class AdvancedStealerGUI(QMainWindow):
         self.addToolBar(toolbar)
         
         # Action Exécuter
-        self.action_run = QAction(QIcon("resources/icons/run.png"), "Exécuter", self)
+        import os
+        icon_path = os.path.join(os.path.dirname(__file__),"../../resources/icons/run.png")
+        self.action_run = QAction(QIcon(icon_path), "Exécuter", self)
         self.action_run.setShortcut("F5")
         toolbar.addAction(self.action_run)
         
         # Action Arrêter
-        self.action_stop = QAction(QIcon("resources/icons/stop.png"), "Arrêter", self)
+        import os
+        icon_path_stop = os.path.join(os.path.dirname(__file__), "../../resources/icons/run.png")
+        self.action_stop = QAction(QIcon(icon_path_stop), "Arrêter", self)
         self.action_stop.setShortcut("F6")
         toolbar.addAction(self.action_stop)
         
         toolbar.addSeparator()
         
         # Action Thème clair/sombre
-        self.action_theme = QAction(QIcon("resources/icons/theme.png"), "Changer de thème", self)
+        import os
+        icon_path_theme = os.path.join(os.path.dirname(__file__), "../../resources/icons/theme.png")
+        self.action_theme = QAction(QIcon(icon_path_theme), "Changer de thème", self)
         toolbar.addAction(self.action_theme)
         
         # Action Ouvrir
-        self.action_open = QAction(QIcon("resources/icons/open.png"), "Ouvrir un fichier", self)
+        import os
+        icon_path_open = os.path.join(os.path.dirname(__file__), "../../resources/icons/open.png")
+        self.action_open = QAction(QIcon(icon_path_open), "Ouvrir un fichier", self)
         toolbar.addAction(self.action_open)
         
         # Action Sauvegarder
-        self.action_save = QAction(QIcon("resources/icons/save.png"), "Sauvegarder", self)
+        import os
+        icon_path_save = os.path.join(os.path.dirname(__file__), "../../resources/icons/save.png")
+        self.action_save = QAction(QIcon(icon_path_save), "Sauvegarder", self)
         toolbar.addAction(self.action_save)
     
     def create_module_tree(self):
